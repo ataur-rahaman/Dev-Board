@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+
+    <!-- tailwind & daisyui cdn -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            sky: '#F4F7FF',
+            text: '#00303C',
+            textgray: '#000000',
+            accent: '#3752FD',
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-sky pt-6 font-poppins">
+    <!-- navbar section -->
+     <header>
+        <nav class="max-w-screen-2xl mx-auto p-5 flex items-center justify-between bg-[#FFFFFF] rounded-2xl">
+            <div class="flex gap-3 items-center">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-4xl font-light">Dev <span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex items-center gap-9">
+                <div class="flex items-center gap-5 rounded-[32px] bg-[#F4F7FF] px-4 py-1">
+                    <div><img src="./assets/checkbox.png" alt=""></div>
+                    <span class="text-[32px] font-bold">23</span>
+                </div>
+                <div class="p-3 rounded-[50px] bg-sky cursor-pointer">
+                    <img src="./assets/theme-btn.png" alt="">
+                </div>
+            </div>
+        </nav>
+     </header>
+    <!-- main section -->
+     <main>
+        <section class="max-w-screen-2xl mx-auto flex gap-6">
+            <!-- dashboard container -->
+            <div class="bg-white p-6 rounded-2xl mt-5 mb-[60px]">
+                <!-- Top bar -->
+                 <div class="flex gap-6 items-center mb-8">
+                    <!-- 1st -->
+                    <div>
+                        <div class="flex items-center gap-5 p-8 bg-sky rounded-xl">
+                            <div class="p-[18px] bg-white rounded-[50px]"><img class="" src="./assets/checkbox.png" alt=""></div>
+                            <p class="text-base font-medium text-text">Task Assigned <br><span class="text-[32px] font-bold">6</span> </p>
+                        </div>
+                    </div>
+                    <!-- 2nd -->
+                    <div class="py-6 pl-10 flex items-center gap-6 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex-grow rounded-xl">
+                        <div><img src="./assets/board.png" alt=""></div>
+                        <p class= "text-2xl font-medium text-white">Discover Something <br> New Today!</p>
+                    </div>
+                    <!-- 3rd -->
+                    <div>
+                        <div class="flex items-center gap-5 p-8 bg-sky rounded-xl">
+                            <div class="p-[18px] bg-white rounded-[50px]"><img class="" src="./assets/calender.png" alt=""></div>
+                            <p class="text-base text-[32px] font-medium text-text">Wed , <br><span class=" font-bold">Jul 28 2025</span> </p>
+                        </div>
+                    </div>
+                 </div>
+                <!-- cards container -->
+                 <div class="grid grid-cols-3 gap-9 ">
+                    <div class="p-6 bg-sky rounded-2xl">
+                        <p class="text-base font-normal text-text rounded-2xl py-2 px-4 bg-white inline">ShopEase</p>
+                        <h2 class="text-2xl font-medium text-text my-4">Fix Mobile Button Issue</h2>
+                        <p class="text-black font-normal p-4 bg-white rounded-lg mb-[14px]">Debug using Chrome<br>Devtools, check for overlappi...</p>
+                        <div class="pt-[14px] flex items-center justify-between border-t-2 border-dashed">
+                            <p class="text-sm font-normal text-text">Deadline<br><span class="text-text text-base font-medium">21 March 2025</span></p>
+                            <button class="text-white font-medium text-base py-2 px-6 bg-accent rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-sky rounded-2xl">
+                        <p class="text-base font-normal text-text rounded-2xl py-2 px-4 bg-white inline">CloudSync</p>
+                        <h2 class="text-2xl font-medium text-text my-4">Add Dark Mode</h2>
+                        <p class="text-black font-normal p-4 bg-white rounded-lg mb-[14px]">Store the user's preference in localStorage, update CS...</p>
+                        <div class="pt-[14px] flex items-center justify-between border-t-2 border-dashed">
+                            <p class="text-sm font-normal text-text">Deadline<br><span class="text-text text-base font-medium">21 March 2025</span></p>
+                            <button class="text-white font-medium text-base py-2 px-6 bg-accent rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-sky rounded-2xl">
+                        <p class="text-base font-normal text-text rounded-2xl py-2 px-4 bg-white inline">SwiftPay</p>
+                        <h2 class="text-2xl font-medium text-text my-4">Optimize  Home page</h2>
+                        <p class="text-black font-normal p-4 bg-white rounded-lg mb-[14px]">Debug using Chrome<br>Devtools, check for overlappi...</p>
+                        <div class="pt-[14px] flex items-center justify-between border-t-2 border-dashed">
+                            <p class="text-sm font-normal text-text">Deadline<br><span class="text-text text-base font-medium">21 March 2025</span></p>
+                            <button class="text-white font-medium text-base py-2 px-6 bg-accent rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-sky rounded-2xl">
+                        <p class="text-base font-normal text-text rounded-2xl py-2 px-4 bg-white inline">Meta</p>
+                        <h2 class="text-2xl font-medium text-text my-4">Add new emoji 🤲</h2>
+                        <p class="text-black font-normal p-4 bg-white rounded-lg mb-[14px]">Debug using Chrome<br>Devtools, check for overlappi...</p>
+                        <div class="pt-[14px] flex items-center justify-between border-t-2 border-dashed">
+                            <p class="text-sm font-normal text-text">Deadline<br><span class="text-text text-base font-medium">21 March 2025</span></p>
+                            <button class="text-white font-medium text-base py-2 px-6 bg-accent rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-sky rounded-2xl">
+                        <p class="text-base font-normal text-text rounded-2xl py-2 px-4 bg-white inline">Google LLC</p>
+                        <h2 class="text-2xl font-medium text-text my-4">Integrate OpenAI API</h2>
+                        <p class="text-black font-normal p-4 bg-white rounded-lg mb-[14px]">Debug using Chrome<br>Devtools, check for overlappi...</p>
+                        <div class="pt-[14px] flex items-center justify-between border-t-2 border-dashed">
+                            <p class="text-sm font-normal text-text">Deadline<br><span class="text-text text-base font-medium">21 March 2025</span></p>
+                            <button class="text-white font-medium text-base py-2 px-6 bg-accent rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-sky rounded-2xl">
+                        <p class="text-base font-normal text-text rounded-2xl py-2 px-4 bg-white inline">Glassdoar</p>
+                        <h2 class="text-2xl font-medium text-text my-4">Improve Job searching </h2>
+                        <p class="text-black font-normal p-4 bg-white rounded-lg mb-[14px]">Debug using Chrome<br>Devtools, check for overlappi...</p>
+                        <div class="pt-[14px] flex items-center justify-between border-t-2 border-dashed">
+                            <p class="text-sm font-normal text-text">Deadline<br><span class="text-text text-base font-medium">21 March 2025</span></p>
+                            <button class="text-white font-medium text-base py-2 px-6 bg-accent rounded-lg">Completed</button>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <!-- activity container -->
+            <div class="rounded-2xl bg-white py-6 mt-5 mb-[60px]">
+                <div class="border-b-2 border-dashed flex flex-col items-center">
+                    <div class="mb-4 flex items-center gap-4">
+                        <img src="./assets/activity.png" alt="">
+                        <h3 class="text-[#00303C] text-xl font-medium">Activity Log</h3>
+                    </div>
+                    <button class="text-white font-medium text-base py-2 px-6 bg-accent rounded-lg mb-3">Clear History</button>
+                </div>
+                <p class="rounded-lg p-[10px] bg-sky my-6 ml-8 mr-4">Activity Log will Appear here when the Task is done</p>
+            </div>
+        </section>
+     </main>
+</body>
+</html>
