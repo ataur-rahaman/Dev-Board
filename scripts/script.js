@@ -13,3 +13,22 @@ function updateDate (){
 }
 updateDate();
 setInterval(updateDate, 60000);
+
+
+// complete button related script
+function completeTask (event) {
+    const taskCounter = document.getElementById('task-counter').innerText;
+    const numTaskCounter = parseInt(taskCounter);
+    const updatedNum = numTaskCounter - 1;
+    document.getElementById('task-counter').innerText = updatedNum;
+    const point = document.getElementById('point').innerText;
+    const numPoint = parseInt(point);
+    const updatedPoint = numPoint + 1;
+    document.getElementById('point').innerText = updatedPoint;
+    event.target.disabled = true;
+    event.target.style.backgroundColor = 'gray';
+}
+const completeBtn = document.querySelectorAll('.complete-btn');
+for(i = 0; i < completeBtn.length; i++){
+    completeBtn[i].addEventListener('click', completeTask)
+}
