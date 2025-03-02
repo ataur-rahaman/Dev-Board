@@ -17,14 +17,11 @@ setInterval(updateDate, 60000);
 
 // complete button related script
 function completeTask (event) {
-    const taskCounter = document.getElementById('task-counter').innerText;
-    const numTaskCounter = parseInt(taskCounter);
-    const updatedNum = numTaskCounter - 1;
-    document.getElementById('task-counter').innerText = updatedNum;
-    const point = document.getElementById('point').innerText;
-    const numPoint = parseInt(point);
-    const updatedPoint = numPoint + 1;
-    document.getElementById('point').innerText = updatedPoint;
+    alert('Board Updated Successfully');
+    const taskCounter = parseInt(document.getElementById('task-counter').innerText) - 1;
+    document.getElementById('task-counter').innerText = taskCounter;
+    const point = parseInt(document.getElementById('point').innerText) + 1;
+    document.getElementById('point').innerText = point;
     event.target.disabled = true;
     event.target.style.backgroundColor = 'gray';
 }
@@ -32,3 +29,29 @@ const completeBtn = document.querySelectorAll('.complete-btn');
 for(i = 0; i < completeBtn.length; i++){
     completeBtn[i].addEventListener('click', completeTask)
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    let buttons = document.querySelectorAll('.complete-btn');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            let taskTitle = this.closest('.cards').querySelector('.card-title').innerText;
+            let activityBox = document.getElementById('activity-box');
+            let time = new Date().toLocaleTimeString('en-US', {hour12: true});
+            const defaultMessage = document.getElementById('default-m');
+            defaultMessage.style.display = 'none';
+            let message = document.createElement('p');
+            message.className = 'rounded-lg p-[10px] bg-sky my-2 ml-8 mr-4';
+            message.innerText = `You have Complete The Task ${taskTitle} at ${time}`;
+
+            activityBox.appendChild(message);
+
+            const clearBtn = document.getElementById('clear-btn');
+            clearBtn.addEventListener('click', function(){
+                message.style.display = 'none'
+                defaultMessage.style.display = 'block';
+            })
+        });
+    }
+});
+
+
